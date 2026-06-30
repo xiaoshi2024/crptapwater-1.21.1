@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:glass_bottle" },
+    { "item": "crptapwater:corpse_water_bucket" }
+  ],
+  "result": {
+    "id": "crptapwater:corpse_water_bottle",
+    "count": 1
+  }
+}

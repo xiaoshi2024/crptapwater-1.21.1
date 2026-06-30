@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    { "item": "minecraft:glass_bottle" },
+    { "item": "minecraft:rotten_flesh" },
+    { "item": "minecraft:spider_eye" }
+  ],
+  "result": {
+    "id": "crptapwater:longshi_mineral_water",
+    "count": 1
+  }
+}

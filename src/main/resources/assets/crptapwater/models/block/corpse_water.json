@@ -1,0 +1,8 @@
+{
+  "credit": "尸兄：饮水公司 - 尸水流体方块 (Corpse Water)",
+  "parent": "neoforge:block/fluid_layer",
+  "render_type": "translucent",
+  "textures": {
+    "particle": "crptapwater:block/corpse_water_still"
+  }
+}

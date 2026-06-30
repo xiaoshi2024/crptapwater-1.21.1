@@ -1,0 +1,11 @@
+{
+  "itemGroup.crptapwater.water_company": "Corpse Brother: Water Company",
+  "block.crptapwater.pipe": "Water Pipe",
+  "block.crptapwater.water_trough": "Village Water Trough",
+  "block.crptapwater.corpse_water": "Corpse Water",
+  "item.crptapwater.corpse_water_bucket": "Corpse Water Bucket",
+  "item.crptapwater.corpse_water_bottle": "Corpse Water Bottle",
+  "item.crptapwater.longshi_mineral_water": "Longshi Mineral Water",
+  "item.crptapwater.longshi_mineral_water_empty": "Longshi Mineral Water (Empty)",
+  "fluid.crptapwater.corpse_water": "Corpse Water"
+}

@@ -1,0 +1,62 @@
+{
+  "credit": "尸兄：饮水公司 - 饮水管道 (物品模型)",
+  "parent": "block/block",
+  "display": {
+    "thirdperson": {
+      "rotation": [ 10, -45, 170 ],
+      "translation": [ 0, 1.5, -2.75 ],
+      "scale": [ 0.375, 0.375, 0.375 ]
+    },
+    "firstperson": {
+      "rotation": [ 0, -135, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 0.4, 0.4, 0.4 ]
+    }
+  },
+  "textures": {
+    "particle": "crptapwater:block/pipe",
+    "pipe_side": "crptapwater:block/pipe",
+    "pipe_end": "crptapwater:block/pipe_end"
+  },
+  "elements": [
+    {
+      "name": "center",
+      "from": [ 5, 5, 5 ],
+      "to":   [ 11, 11, 11 ],
+      "faces": {
+        "north": { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" },
+        "south": { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" },
+        "east":  { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" },
+        "west":  { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" },
+        "up":    { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" },
+        "down":  { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" }
+      }
+    },
+    {
+      "name": "east_arm",
+      "from": [ 11, 5, 5 ],
+      "to":   [ 16, 11, 11 ],
+      "faces": {
+        "north": { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" },
+        "south": { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" },
+        "east":  { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end", "cullface": "east" },
+        "west":  { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" },
+        "up":    { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" },
+        "down":  { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" }
+      }
+    },
+    {
+      "name": "west_arm",
+      "from": [ 0, 5, 5 ],
+      "to":   [ 5, 11, 11 ],
+      "faces": {
+        "north": { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" },
+        "south": { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" },
+        "west":  { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end", "cullface": "west" },
+        "east":  { "uv": [ 5, 5, 11, 11 ], "texture": "#pipe_end" },
+        "up":    { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" },
+        "down":  { "uv": [ 0, 5, 5, 11 ], "texture": "#pipe_side" }
+      }
+    }
+  ]
+}

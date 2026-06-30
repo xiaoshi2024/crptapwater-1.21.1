@@ -1,0 +1,25 @@
+{
+	"format_version": "1.21.11",
+	"credit": "尸兄：饮水公司 - 管道延伸段 (Pipe Side)",
+	"parent": "block/block",
+	"render_type": "cutout_mipped",
+	"textures": {
+		"particle": "crptapwater:block/pipe",
+		"pipe_side": "crptapwater:block/pipe"
+	},
+	"elements": [
+		{
+			"name": "pipe_north_arm",
+			"from": [5, 5, 0],
+			"to": [11, 11, 5],
+			"faces": {
+				"north": {"uv": [5, 5, 11, 11], "texture": "#pipe_side", "cullface": "north"},
+				"east": {"uv": [0, 5, 5, 11], "texture": "#pipe_side"},
+				"south": {"uv": [5, 5, 11, 11], "texture": "#pipe_side"},
+				"west": {"uv": [0, 5, 5, 11], "texture": "#pipe_side"},
+				"up": {"uv": [0, 5, 5, 11], "texture": "#pipe_side"},
+				"down": {"uv": [0, 5, 5, 11], "texture": "#pipe_side"}
+			}
+		}
+	]
+}

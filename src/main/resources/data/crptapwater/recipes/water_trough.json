@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P P",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": { "item": "minecraft:oak_planks" }
+  },
+  "result": {
+    "id": "crptapwater:water_trough",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "itemGroup.crptapwater.water_company": "尸兄：饮水公司",
+  "block.crptapwater.pipe": "饮水管道",
+  "block.crptapwater.water_trough": "村庄水槽",
+  "block.crptapwater.corpse_water": "尸水",
+  "item.crptapwater.corpse_water_bucket": "尸水桶",
+  "item.crptapwater.corpse_water_bottle": "尸水瓶",
+  "item.crptapwater.longshi_mineral_water": "矿泉水（龙氏）",
+  "item.crptapwater.longshi_mineral_water_empty": "矿泉水（龙氏）（空）",
+  "fluid.crptapwater.corpse_water": "尸水"
+}

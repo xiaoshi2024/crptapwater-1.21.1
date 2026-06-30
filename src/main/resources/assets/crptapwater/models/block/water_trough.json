@@ -1,0 +1,6 @@
+{
+  "parent": "builtin/generated",
+  "textures": {
+    "particle": "crptapwater:block/water_trough_clean"
+  }
+}
