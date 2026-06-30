@@ -1,5 +1,6 @@
 package com.xiaoshi2022.crptapwater;
 
+import com.xiaoshi2022.crptapwater.client.renderer.block.PipeBlockEntityRenderer;
 import com.xiaoshi2022.crptapwater.client.renderer.block.WaterTroughBlockRenderer;
 import com.xiaoshi2022.crptapwater.register.BlockEntityRegistry;
 import net.neoforged.api.distmarker.Dist;
@@ -16,6 +17,10 @@ public class CRPTapWaterClient {
                 BlockEntityRegistry.WATER_TROUGH_BLOCK_ENTITY.get(),
                 WaterTroughBlockRenderer::new
         );
-        CRPTapWater.LOGGER.info("已注册水槽 Geo 渲染器: WaterTroughBlockRenderer");
+        event.registerBlockEntityRenderer(
+                BlockEntityRegistry.PIPE_BLOCK_ENTITY.get(),
+                PipeBlockEntityRenderer::new
+        );
+        CRPTapWater.LOGGER.info("已注册水槽 Geo 渲染器 + 管道流体渲染器");
     }
 }
