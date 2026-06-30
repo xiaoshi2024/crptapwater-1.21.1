@@ -48,9 +48,9 @@ public class BlockRegistry {
             BLOCKS.registerBlock("water_trough",
                     properties -> new VillageWaterTroughBlock(properties),
                     BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.WOOD)
-                            .strength(1.5F, 6.0F)
-                            .sound(SoundType.WOOD)
+                            .mapColor(MapColor.METAL)
+                            .strength(3.0F, 8.0F)
+                            .sound(SoundType.METAL)
                             .requiresCorrectToolForDrops()
             );
 }

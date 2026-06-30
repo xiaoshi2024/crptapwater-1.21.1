@@ -130,8 +130,8 @@ public class VillageWaterTroughBlockEntity extends BlockEntity implements GeoBlo
                     fluidStorage.fill(new FluidStack(
                             WaterCompanyAPI.getCorpseWaterHandler().getCorpseWaterFluid(), amount),
                             IFluidHandler.FluidAction.EXECUTE);
-                    com.xiaoshi2022.crptapwater.CRPTapWater.LOGGER.info(
-                            "水槽在 {} 被污染！水质检测发现尸水污染，已自动转化为尸水", pos);
+                    // CRPTapWater.LOGGER.info(
+                    //         "水槽在 {} 被污染！水质检测发现尸水污染，已自动转化为尸水", pos);
                 }
             }
         }

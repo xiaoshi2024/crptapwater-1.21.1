@@ -36,8 +36,8 @@ public class LongShiMineralWater extends Item {
             try {
                 com.phagens.corpseorigin.api.watercompany.WaterCompanyAPI.getInfectionTrigger()
                         .triggerInfection(entity, serverLevel);
-                com.xiaoshi2022.crptapwater.CRPTapWater.LOGGER.info(
-                        "{} 喝下了矿泉水(龙氏)，感染了尸兄病毒！", entity.getName().getString());
+                // com.xiaoshi2022.crptapwater.CRPTapWater.LOGGER.info(
+                //         "{} 喝下了矿泉水(龙氏)，感染了尸兄病毒！", entity.getName().getString());
             } catch (Exception e) {
                 com.xiaoshi2022.crptapwater.CRPTapWater.LOGGER.warn("触发尸兄感染失败: {}", e.getMessage());
             }

@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "crptapwater:water_trough"
+          "name": "crptapwater:pipe"
         }
       ],
       "conditions": [

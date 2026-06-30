@@ -10,6 +10,7 @@ import com.xiaoshi2022.crptapwater.register.BlockEntityRegistry;
 import com.xiaoshi2022.crptapwater.register.BlockRegistry;
 import com.xiaoshi2022.crptapwater.register.ItemRegistry;
 import com.xiaoshi2022.crptapwater.village.VillageWaterTroughBlockEntity;
+import com.xiaoshi2022.crptapwater.village.VillageWaterTroughPlacer;
 import com.xiaoshi2022.crptapwater.village.VillagerThirstGoal;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -18,7 +19,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -28,14 +28,15 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.common.world.StructureModifier;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CRPTapWater.MODID)
@@ -45,7 +46,6 @@ public class CRPTapWater {
     // Directly reference a slf4j logger
     public static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(MODID);
 
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "crptapwater" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
@@ -81,6 +81,9 @@ public class CRPTapWater {
 
         // Register Items
         ItemRegistry.ITEMS.register(modEventBus);
+
+        // 注册水槽放置器（使用 ServerTickEvent 版本）
+        NeoForge.EVENT_BUS.register(new VillageWaterTroughPlacer());
 
         // Register Block Entities
         BlockEntityRegistry.BLOCK_ENTITIES.register(modEventBus);

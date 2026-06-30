@@ -140,11 +140,12 @@ public class VillagerThirstGoal extends Goal {
         if (be instanceof VillageWaterTroughBlockEntity trough) {
             boolean wasPolluted = trough.isWaterPolluted();
             if (trough.consumeWaterForVillager(DRINK_AMOUNT)) {
+                trough.triggerDispenseAnimation(wasPolluted);
                 if (wasPolluted) {
                     WaterCompanyAPI.getInfectionTrigger().triggerInfection(villager, level);
-                    com.xiaoshi2022.crptapwater.CRPTapWater.LOGGER.info(
-                            "村民 {} 在 {} 喝下了污染的尸水，即将变异！",
-                            villager.getName().getString(), targetTrough);
+                    // CRPTapWater.LOGGER.info(
+                    //         "村民 {} 在 {} 喝下了污染的尸水，即将变异！",
+                    //         villager.getName().getString(), targetTrough);
                 }
                 drinkCooldown = 1200;
                 targetTrough = null;

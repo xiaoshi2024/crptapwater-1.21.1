@@ -1,0 +1,6 @@
+{
+  "type": "crptapwater:add_water_trough",
+  "structures": [
+    "#minecraft:village"
+  ]
+}
