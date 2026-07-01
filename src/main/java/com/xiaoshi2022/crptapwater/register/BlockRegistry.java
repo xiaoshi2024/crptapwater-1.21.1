@@ -4,8 +4,6 @@ import com.xiaoshi2022.crptapwater.CRPTapWater;
 import com.xiaoshi2022.crptapwater.fluid.FluidRegistry;
 import com.xiaoshi2022.crptapwater.pipe.PipeBlock;
 import com.xiaoshi2022.crptapwater.village.VillageWaterTroughBlock;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;

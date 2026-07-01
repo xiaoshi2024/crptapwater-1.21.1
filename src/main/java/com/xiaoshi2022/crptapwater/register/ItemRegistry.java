@@ -3,7 +3,10 @@ package com.xiaoshi2022.crptapwater.register;
 import com.xiaoshi2022.crptapwater.CRPTapWater;
 import com.xiaoshi2022.crptapwater.item.LongShiMineralWater;
 import net.minecraft.world.food.FoodProperties;  // 添加这个导入
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
