@@ -3,8 +3,16 @@ package com.xiaoshi2022.crptapwater;
 import com.phagens.corpseorigin.api.watercompany.WaterCompanyAPI;
 import com.phagens.corpseorigin.register.Moditems;
 import com.xiaoshi2022.crptapwater.api.CustomCorpseWaterHandler;
+import com.xiaoshi2022.crptapwater.dialogue.CorpseBrotherHelper;
 import com.xiaoshi2022.crptapwater.fluid.FluidRegistry;
+import com.xiaoshi2022.crptapwater.network.CorpseNetwork;
 import com.xiaoshi2022.crptapwater.network.SSyncWaterTroughAnimPacket;
+import com.xiaoshi2022.crptapwater.network.c2s.CCorpseDialogueAnswerPacket;
+import com.xiaoshi2022.crptapwater.network.c2s.CCorpseDialogueClosePacket;
+import com.xiaoshi2022.crptapwater.network.c2s.CCorpseDialogueInitPacket;
+import com.xiaoshi2022.crptapwater.network.s2c.SCorpseDialogueQuestionPacket;
+import com.xiaoshi2022.crptapwater.network.s2c.SCorpseDialogueResponsePacket;
+import com.xiaoshi2022.crptapwater.network.s2c.SOpenCorpseDialogPacket;
 import com.xiaoshi2022.crptapwater.pipe.PipeBlockEntity;
 import com.xiaoshi2022.crptapwater.register.BlockEntityRegistry;
 import com.xiaoshi2022.crptapwater.register.BlockRegistry;
@@ -15,9 +23,11 @@ import com.xiaoshi2022.crptapwater.village.VillagerThirstGoal;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
@@ -30,8 +40,8 @@ import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
@@ -118,15 +128,53 @@ public class CRPTapWater {
         LOGGER.info("  村庄水槽: 已就绪");
         LOGGER.info("  村民口渴AI: 已就绪");
         LOGGER.info("  矿泉水(龙氏): 已就绪");
+        LOGGER.info("  尸兄对话系统: 已就绪（右键有智商的尸兄开始对话）");
         LOGGER.info("================================================================");
     }
 
     private void registerPayloads(RegisterPayloadHandlersEvent event) {
         PayloadRegistrar registrar = event.registrar(MODID).versioned("1.0");
+
         registrar.playToClient(
                 SSyncWaterTroughAnimPacket.TYPE,
                 SSyncWaterTroughAnimPacket.STREAM_CODEC,
                 SSyncWaterTroughAnimPacket::handle
+        );
+
+        registrar.playToClient(
+                SOpenCorpseDialogPacket.TYPE,
+                SOpenCorpseDialogPacket.STREAM_CODEC,
+                SOpenCorpseDialogPacket::handle
+        );
+
+        registrar.playToClient(
+                SCorpseDialogueQuestionPacket.TYPE,
+                SCorpseDialogueQuestionPacket.STREAM_CODEC,
+                SCorpseDialogueQuestionPacket::handle
+        );
+
+        registrar.playToClient(
+                SCorpseDialogueResponsePacket.TYPE,
+                SCorpseDialogueResponsePacket.STREAM_CODEC,
+                SCorpseDialogueResponsePacket::handle
+        );
+
+        registrar.playToServer(
+                CCorpseDialogueInitPacket.TYPE,
+                CCorpseDialogueInitPacket.STREAM_CODEC,
+                CCorpseDialogueInitPacket::handle
+        );
+
+        registrar.playToServer(
+                CCorpseDialogueAnswerPacket.TYPE,
+                CCorpseDialogueAnswerPacket.STREAM_CODEC,
+                CCorpseDialogueAnswerPacket::handle
+        );
+
+        registrar.playToServer(
+                CCorpseDialogueClosePacket.TYPE,
+                CCorpseDialogueClosePacket.STREAM_CODEC,
+                CCorpseDialogueClosePacket::handle
         );
     }
 
@@ -175,6 +223,28 @@ public class CRPTapWater {
                 villager.goalSelector.addGoal(3, new VillagerThirstGoal(villager));
             } catch (Exception e) {
                 LOGGER.warn("注入村民口渴AI失败: {}", e.getMessage());
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onCorpseBrotherInteract(PlayerInteractEvent.EntityInteract event) {
+        if (event.getLevel().isClientSide()) return;
+        if (event.getHand() != InteractionHand.MAIN_HAND) return;
+        Entity target = event.getTarget();
+        Player player = event.getEntity();
+        if (!(player instanceof net.minecraft.server.level.ServerPlayer serverPlayer)) return;
+
+        if (target instanceof Mob mob && CorpseBrotherHelper.isCorpseBrother(mob)) {
+            if (player.isShiftKeyDown()) return;
+
+            if (CorpseBrotherHelper.canDialogue(mob)) {
+                CorpseNetwork.sendToPlayer(
+                        new SOpenCorpseDialogPacket(mob.getId(), mob.getUUID()),
+                        serverPlayer
+                );
+                event.setCanceled(true);
+                event.setCancellationResult(net.minecraft.world.InteractionResult.CONSUME);
             }
         }
     }

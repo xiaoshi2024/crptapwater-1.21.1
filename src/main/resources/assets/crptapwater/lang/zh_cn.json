@@ -7,5 +7,50 @@
   "item.crptapwater.corpse_water_bottle": "尸水瓶",
   "item.crptapwater.longshi_mineral_water": "矿泉水（龙氏）",
   "item.crptapwater.longshi_mineral_water_empty": "矿泉水（龙氏）（空）",
-  "fluid.crptapwater.corpse_water": "尸水"
+  "fluid.crptapwater.corpse_water": "尸水",
+
+  "gui.crptapwater.corpse_dialog.title": "尸兄对话",
+  "gui.crptapwater.corpse_dialog.health": "生命：%s / %s",
+  "gui.crptapwater.corpse_dialog.hint": "[ ESC 关闭 · 右键尸兄开启对话 ]",
+  "gui.crptapwater.corpse_dialog.name_prefix": "尸兄 · ",
+
+  "dialog.crptapwater.question.root": "呃... 咕... 你... 你找我有什么事？",
+  "dialog.crptapwater.question.about_drink": "饮料？... 咕... 你说的是饮水公司的那种饮料？",
+  "dialog.crptapwater.question.about_body": "我？... 咳咳... 就这样吧... 咕... 习惯了...",
+  "dialog.crptapwater.question.about_work": "工作？... 呃... 我在饮水公司那边帮忙... 咕噜...",
+  "dialog.crptapwater.question.about_gift": "给... 给我东西？咕... 是什么...？",
+
+  "dialog.crptapwater.answer.root.drink": "聊聊「尸水饮料」相关的事",
+  "dialog.crptapwater.answer.root.body": "你最近身体状况怎么样？",
+  "dialog.crptapwater.answer.root.work": "你在饮水公司做什么工作？",
+  "dialog.crptapwater.answer.root.gift": "我想给你送点东西...",
+  "dialog.crptapwater.answer.root.bye": "再见，保重！",
+
+  "dialog.crptapwater.answer.about_drink.taste": "这饮料喝起来口感怎么样？",
+  "dialog.crptapwater.answer.about_drink.recipe": "尸水饮料到底是什么配方？",
+  "dialog.crptapwater.answer.about_drink.suggest": "你觉得什么口味更适合尸兄？",
+  "dialog.crptapwater.answer.back": "← 回到上一个话题",
+
+  "dialog.crptapwater.answer.about_body.comfort": "别太难过了，一切都会慢慢好起来的",
+  "dialog.crptapwater.answer.about_body.heal": "你有没有想过被治愈，变回正常人？",
+
+  "dialog.crptapwater.answer.about_work.what": "给我详细讲讲你的工作内容吧",
+  "dialog.crptapwater.answer.about_work.price": "饮水公司的饮料一瓶卖多少钱？",
+
+  "dialog.crptapwater.answer.about_gift.golden_apple": "递出一只金苹果（据说能起作用）",
+  "dialog.crptapwater.answer.about_gift.flesh": "递出一些腐肉（食物）",
+  "dialog.crptapwater.answer.about_gift.later": "下次带了东西再来吧",
+
+  "dialog.crptapwater.result.drink_taste": "咕... 口感黏黏的... 带点涩味... 但是... 很解渴... 喝下去很踏实... 是熟悉的味道...",
+  "dialog.crptapwater.result.drink_recipe": "呃... 配方？咕噜... 这个是公司的商业机密... 我真的不能乱说... 咕...",
+  "dialog.crptapwater.result.drink_suggest": "咕... 我希望能出那种「更浓稠一点」的口味... 带点「真实感」的... 现在的尸水味道太淡了... 不够劲儿...",
+  "dialog.crptapwater.result.body_comfort": "...呜... 咳咳... 谢谢... 你是个好人... 咕... 我很久没听到有人说这种话了...",
+  "dialog.crptapwater.result.body_heal": "治愈？... 咕... 我... 我想都不敢想... 金苹果太珍贵了... 谁会花那种东西在我这种尸兄身上呢...",
+  "dialog.crptapwater.result.work_what": "我... 我主要是看守村庄水槽... 还有给路过的村民提供饮水... 咕噜... 不忙，但无聊... 你有兴趣的话可以来试试...",
+  "dialog.crptapwater.result.work_price": "呃... 一瓶普通尸水是 3 枚绿宝石... 龙氏矿泉水要 5 枚... 咕... 我自己都喝不起龙氏的...",
+  "dialog.crptapwater.result.gift_later": "啊... 是吗... 咕... 没关系... 等你下次有了再来就行... 我一直在这里的...",
+  "dialog.crptapwater.result.accept_golden_apple": "！！！ 这... 这真的是传说中的金苹果吗？！！ 咕... 谢谢... 太感谢了... 我、我真的可以收下吗？！",
+  "dialog.crptapwater.result.no_golden_apple": "嗯？... 你手里拿的不是金苹果啊... 咕... 没事的... 有这份心意我就很满足了...",
+  "dialog.crptapwater.result.accept_flesh": "咕噜... 腐肉... 太棒了！... 虽然有点腥，但这可是实实在在的食物啊... 谢谢！我会慢慢享用的！",
+  "dialog.crptapwater.result.no_flesh": "腐肉呢？... 你手里拿的不是腐肉啊... 咕... 没关系的... 下次记得带来就行..."
 }

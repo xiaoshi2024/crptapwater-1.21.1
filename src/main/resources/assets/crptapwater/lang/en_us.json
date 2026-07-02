@@ -7,5 +7,50 @@
   "item.crptapwater.corpse_water_bottle": "Corpse Water Bottle",
   "item.crptapwater.longshi_mineral_water": "Longshi Mineral Water",
   "item.crptapwater.longshi_mineral_water_empty": "Longshi Mineral Water (Empty)",
-  "fluid.crptapwater.corpse_water": "Corpse Water"
+  "fluid.crptapwater.corpse_water": "Corpse Water",
+
+  "gui.crptapwater.corpse_dialog.title": "Corpse Brother Dialog",
+  "gui.crptapwater.corpse_dialog.health": "Health: %s / %s",
+  "gui.crptapwater.corpse_dialog.hint": "[ Press ESC to close · Right-click a Corpse Brother ]",
+  "gui.crptapwater.corpse_dialog.name_prefix": "Corpse Brother · ",
+
+  "dialog.crptapwater.question.root": "Urrghh... Gurgle... What... What do you want from me?",
+  "dialog.crptapwater.question.about_drink": "Drinks? ... Gurgle... You mean the stuff from the Water Company?",
+  "dialog.crptapwater.question.about_body": "Me? ... Cough cough... I'm... okay I guess... Urgh... Got used to it...",
+  "dialog.crptapwater.question.about_work": "Work? ... Ugh... I help out at the Water Company... Gurgle...",
+  "dialog.crptapwater.question.about_gift": "Giving me... something? Gurgle... What is it...?",
+
+  "dialog.crptapwater.answer.root.drink": "Let's talk about Corpse Water drinks",
+  "dialog.crptapwater.answer.root.body": "How are you feeling physically?",
+  "dialog.crptapwater.answer.root.work": "What's your job at the Water Company?",
+  "dialog.crptapwater.answer.root.gift": "I have something for you...",
+  "dialog.crptapwater.answer.root.bye": "Goodbye, take care!",
+
+  "dialog.crptapwater.answer.about_drink.taste": "What does the drink actually taste like?",
+  "dialog.crptapwater.answer.about_drink.recipe": "What's really in the Corpse Water recipe?",
+  "dialog.crptapwater.answer.about_drink.suggest": "What flavor do you think would suit Corpse Brothers?",
+  "dialog.crptapwater.answer.back": "← Back to previous topic",
+
+  "dialog.crptapwater.answer.about_body.comfort": "Don't be too sad, things will get better slowly",
+  "dialog.crptapwater.answer.about_body.heal": "Have you ever thought about being cured back to normal?",
+
+  "dialog.crptapwater.answer.about_work.what": "Tell me the details of what you do at work",
+  "dialog.crptapwater.answer.about_work.price": "How much does a bottle of the water actually cost?",
+
+  "dialog.crptapwater.answer.about_gift.golden_apple": "Offer a Golden Apple (rumored to do something)",
+  "dialog.crptapwater.answer.about_gift.flesh": "Offer some Rotten Flesh (food)",
+  "dialog.crptapwater.answer.about_gift.later": "Maybe I'll bring something next time",
+
+  "dialog.crptapwater.result.drink_taste": "Gurgle... It's kind of sticky... a bit bitter... But... quenches the thirst real good... Feels solid inside... A familiar flavor...",
+  "dialog.crptapwater.result.drink_recipe": "Urgh... The recipe? Gurgle... that's a company trade secret... I really can't just tell you... Urgh...",
+  "dialog.crptapwater.result.drink_suggest": "Urgh... I wish they made a \"thicker, richer\" kind... with more \"authentic\" texture... The current Corpse Water is too watered down... Not enough punch...",
+  "dialog.crptapwater.result.body_comfort": "...Sniff... Cough... Thank you... You're a kind soul... Urgh... No one has said anything like that to me in ages...",
+  "dialog.crptapwater.result.body_heal": "Cured? ... Urgh... I... I wouldn't even dare to hope... Golden Apples are so precious... Who would ever waste one on a Corpse Brother like me...",
+  "dialog.crptapwater.result.work_what": "I... I mostly stand guard over the village water troughs... and give water to passing villagers... Gurgle... Not busy, but boring... You should try it sometime...",
+  "dialog.crptapwater.result.work_price": "Urgh... A plain Corpse Water bottle is 3 Emeralds... Longshi Mineral Water is 5... Gurgle... I can't even afford Longshi myself...",
+  "dialog.crptapwater.result.gift_later": "Ah... Is that so... Gurgle... No worries... Just come back when you have something... I'll be right here...",
+  "dialog.crptapwater.result.accept_golden_apple": "!!! Is... Is that really a legendary Golden Apple?! Gurgle... Thank you... Thank you so much... C-Can I really have this?!",
+  "dialog.crptapwater.result.no_golden_apple": "Hmm? ... That's not a Golden Apple in your hand... Urgh... It's fine... The thought alone means a lot...",
+  "dialog.crptapwater.result.accept_flesh": "Gurgle... Rotten flesh... Yes! ... A bit gamey, but it's real food... Thanks! I'll savor every bite!",
+  "dialog.crptapwater.result.no_flesh": "Rotten flesh? ... That's not it in your hand... Urgh... No big deal... Just remember to bring some next time..."
 }
